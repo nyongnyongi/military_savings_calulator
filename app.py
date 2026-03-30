@@ -49,11 +49,12 @@ with st.sidebar:
     
     st.subheader("💰 적금 1")
     s1 = st.number_input("납입액 (만원)", 0, 30, 30, key="s1")
-    r1 = st.slider("금리 (%)", 0.0, 10.0, 5.0, key="r1")
+    r1 = st.slider("금리 (%)", 0.0, 10.0, 5.0, step=0.1, key="r1")
+
     
     st.subheader("💰 적금 2")
     s2 = st.number_input("납입액 (만원)", 0, 30, 25, key="s2")
-    r2 = st.slider("금리 (%)", 0.0, 10.0, 5.0, key="r2")
+    r2 = st.slider("금리 (%)", 0.0, 10.0, 5.0, step=0.1, key="r2")
 
 if s1 + s2 <= 55:
     # 수정된 함수 호출 (인자 5개)
