@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import base64
 import calendar
 from dataclasses import dataclass
@@ -194,39 +193,45 @@ section[data-testid="stSidebar"] [data-testid="stDateInput"] input{background:#f
 .brand h1{font-size:1.55rem;margin:0;font-weight:900;letter-spacing:-.02em;font-family:'Noto Sans KR',sans-serif;}
 .brand h1{font-size:1.55rem;margin:0;font-weight:900;letter-spacing:-.02em;font-family:'Noto Sans KR',sans-serif;}
 .brand p{font-size:.68rem;margin:.25rem 0 0;opacity:.67;letter-spacing:.08em;}
-.top-title{display:flex;align-items:center;gap:14px;margin-bottom:1.1rem;padding:1rem 1.25rem;border-radius:12px;background:linear-gradient(115deg, rgba(0,0,0,0.04), rgba(255,255,255,0.02));color:var(--pd);box-shadow:0 10px 20px rgba(0,0,0,.06);position:relative;z-index:60;}
-.top-title img{width:auto;max-width:64px;height:64px;object-fit:contain;margin-right:8px;}
-.top-title h2{font-size:1.45rem;margin:0;font-weight:800;letter-spacing:-.01em;font-family:'Noto Sans KR',sans-serif;color:var(--pd);line-height:1.05;}
-.top-title p{margin:.25rem 0 0;font-size:.76rem;opacity:.85;color:rgba(0,0,0,.55);}
+.top-title{display:flex;align-items:center;gap:14px;margin-bottom:1.1rem;padding:1.2rem 1.6rem;border-radius:14px;background:rgba(255,255,255,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);color:var(--pd);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 24px rgba(0,0,0,.1);position:relative;z-index:60;}
+.top-title::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.08));border-radius:14px;pointer-events:none;z-index:-1;}
+.top-title img{width:auto;max-width:68px;height:68px;object-fit:contain;margin-right:8px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1));}
+.top-title h2{font-size:1.5rem;margin:0;font-weight:800;letter-spacing:-.01em;font-family:'Noto Sans KR',sans-serif;color:var(--pd);line-height:1.1;}
+.top-title p{margin:.25rem 0 0;font-size:.8rem;opacity:.9;color:rgba(0,0,0,.6);}
 
 /* Landing title style (large, but refined spacing) */
 .landing-title{font-family:'Noto Sans KR',sans-serif;font-weight:900;font-size:3.2rem;letter-spacing:-.02em;margin:0;padding:0;line-height:1.02;color:#0f2730;text-transform:none}
 .landing-sub{color:#6b7575;margin-top:.6rem}
-.panel{background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border:1px solid rgba(60,70,78,.18);border-radius:12px;box-shadow:0 12px 28px rgba(25,35,45,.12);padding:1.6rem 1.4rem;margin:1.6rem 0;position:relative;z-index:30;}
+.panel{background:rgba(255,255,255,.68);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 24px rgba(0,0,0,.12);padding:1.8rem 1.6rem;margin:1.6rem 0;position:relative;z-index:1;}
 .section-head{font-size:1rem;font-weight:900;color:var(--pd);padding-left:.6rem;border-left:4px solid var(--p);margin:.2rem 0 .9rem;}
-.stButton>button{min-height:3.1rem;border-radius:8px;border:1px solid rgba(0,0,0,.06)!important;background:linear-gradient(180deg,var(--p),var(--pd))!important;color:white!important;font-weight:900;box-shadow:0 7px 16px rgba(0,0,0,.14)!important;transition:.12s;padding:.6rem 1rem!important;position:relative;z-index:40;}
-.stButton>button:hover{filter:brightness(1.06);transform:translateY(-1px);}
+.stButton>button{min-height:3.1rem;border-radius:8px;border:1px solid rgba(0,0,0,.08)!important;background:linear-gradient(135deg,var(--p),var(--pd))!important;color:white!important;font-weight:900;box-shadow:0 4px 12px rgba(0,0,0,.15)!important;transition:.15s ease!important;padding:.6rem 1rem!important;position:relative;z-index:10;}
+.stButton>button:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.2)!important;}
+.stButton>button:active{transform:translateY(0);box-shadow:0 2px 8px rgba(0,0,0,.1)!important;}
+/* Prevent button wrapper from causing overlap */
+.stButton{z-index:10;position:relative;margin:.5rem 0;}
 /* Ensure buttons inside panels/cards are opaque and visible */
-.panel .stButton>button, .block-container .stButton>button, section[data-testid="stSidebar"] .stButton>button {background:linear-gradient(180deg,var(--p),var(--pd))!important;color:white!important;border:1px solid rgba(0,0,0,.06)!important;box-shadow:0 8px 18px rgba(0,0,0,.12)!important}
+.panel .stButton>button, .block-container .stButton>button, section[data-testid="stSidebar"] .stButton>button {background:linear-gradient(135deg,var(--p),var(--pd))!important;color:white!important;border:1px solid rgba(0,0,0,.08)!important;box-shadow:0 4px 12px rgba(0,0,0,.15)!important}
 /* Force opaque themed buttons immediately following card panels (landing page selection buttons) */
-.panel + .stButton>button, .panel ~ .stButton>button, .stColumns .stButton>button {background:linear-gradient(180deg,var(--p),var(--pd))!important;color:white!important;opacity:1!important;border:1px solid rgba(0,0,0,.06)!important;box-shadow:0 8px 18px rgba(0,0,0,.12)!important}
+.panel + .stButton>button, .panel ~ .stButton>button, .stColumns .stButton>button {background:linear-gradient(135deg,var(--p),var(--pd))!important;color:white!important;opacity:1!important;border:1px solid rgba(0,0,0,.08)!important;box-shadow:0 4px 12px rgba(0,0,0,.15)!important}
 /* Strong fallback to prevent Streamlit theme from making buttons transparent */
-.stButton>button, .stButton>button * {background-image:none!important;background-color:var(--pd)!important;background:linear-gradient(180deg,var(--p),var(--pd))!important;color:white!important;opacity:1!important}
-.stTabs [data-baseweb="tab-list"]{gap:5px;background:transparent;padding:5px;border-radius:9px;border:1px solid rgba(0,0,0,.04);}
-.stTabs [data-baseweb="tab"]{height:42px;border-radius:7px;font-weight:800;color:rgba(0,0,0,.6);}
-/* Use underline highlight for the active tab instead of a colored block */
-.stTabs [aria-selected="true"]{background:transparent!important;color:var(--pd)!important;border-bottom:3px solid var(--p)!important;box-shadow:none!important;}
-div[data-testid="stMetric"]{background:rgba(255,255,255,0.98);border:1px solid rgba(30,42,50,.12);border-top:4px solid var(--p);border-radius:10px;padding:1rem;box-shadow:0 9px 19px rgba(0,0,0,.06);min-width:160px;}
+.stButton>button, .stButton>button * {background-image:none!important;background-color:var(--pd)!important;background:linear-gradient(135deg,var(--p),var(--pd))!important;color:white!important;opacity:1!important}
+.stTabs [data-baseweb="tab-list"]{gap:6px;background:rgba(255,255,255,.5);padding:6px;border-radius:10px;border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 2px rgba(255,255,255,.5);}
+.stTabs [data-baseweb="tab"]{height:44px;border-radius:8px;font-weight:800;color:rgba(0,0,0,.7);background:transparent;transition:.15s;}
+.stTabs [aria-selected="true"]{background:rgba(255,255,255,.8)!important;color:var(--pd)!important;border-bottom:none!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 2px 8px rgba(0,0,0,.06)!important;}
+div[data-testid="stMetric"]{background:rgba(255,255,255,.68);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-top:4px solid var(--p);border-radius:12px;padding:1.2rem;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 16px rgba(0,0,0,.08);min-width:160px;}
 /* Ensure metric labels/values are visible and not clipped */
-div[data-testid="stMetric"] div[data-testid="stMetricLabel"]{font-weight:900;color:#22343a!important;font-family:'Noto Sans KR',sans-serif;font-size:1rem;opacity:1!important;letter-spacing:.06em;text-transform:capitalize;margin-bottom:.25rem}
-div[data-testid="stMetric"] div[data-testid="stMetricValue"]{font-weight:900;color:#0f2730!important;font-family:'Noto Sans KR',sans-serif;letter-spacing:-.02em;white-space:normal;overflow-wrap:anywhere;word-break:break-word;text-overflow:clip;font-size:1.12rem;}
-@media(max-width:900px){div[data-testid="stMetric"] div[data-testid="stMetricValue"]{font-size:1rem;}}
-div[data-baseweb="input"],div[data-baseweb="select"]>div{border-radius:7px!important;background:rgba(255,255,255,.96)!important;}
-[data-testid="stDataFrame"]{border-radius:9px;overflow:hidden;border:1px solid rgba(0,0,0,.12);}
-.summary-banner{display:flex;justify-content:space-between;align-items:end;padding:1.2rem 1.4rem;border-radius:10px;background:var(--ps);color:var(--pd);box-shadow:0 8px 18px rgba(0,0,0,.06);}
-.summary-banner small{font-weight:800;letter-spacing:.14em;opacity:1;color:var(--p);} .summary-banner strong{font-size:2rem;font-weight:900;letter-spacing:-.05em;color:var(--pd);}
-.mini-card{background:rgba(255,255,255,.93);border:1px solid rgba(30,42,50,.12);border-radius:9px;padding:1rem;min-height:112px;box-shadow:0 8px 18px rgba(0,0,0,.07);}
-.mini-card small{font-weight:900;color:var(--p);letter-spacing:.1em;} .mini-card b{display:block;font-size:1.25rem;color:var(--pd);margin:.45rem 0;}
+div[data-testid="stMetric"] div[data-testid="stMetricLabel"]{font-weight:900;color:#22343a!important;font-family:'Noto Sans KR',sans-serif;font-size:.9rem;opacity:1!important;letter-spacing:.06em;text-transform:capitalize;margin-bottom:.3rem}
+div[data-testid="stMetric"] div[data-testid="stMetricValue"]{font-weight:900;color:#0f2730!important;font-family:'Noto Sans KR',sans-serif;letter-spacing:-.02em;white-space:normal;overflow-wrap:anywhere;word-break:break-word;text-overflow:clip;font-size:1.25rem;}
+@media(max-width:900px){div[data-testid="stMetric"] div[data-testid="stMetricValue"]{font-size:1.1rem;}}
+div[data-baseweb="input"],div[data-baseweb="select"]>div{border-radius:8px!important;background:rgba(255,255,255,.9)!important;border:1px solid rgba(200,200,200,.5)!important;box-shadow:inset 0 1px 2px rgba(255,255,255,.8)!important;}
+[data-testid="stDataFrame"]{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.4);}
+.summary-banner{display:flex;justify-content:space-between;align-items:end;padding:1.4rem 1.8rem;border-radius:14px;background:rgba(255,255,255,.68);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);color:var(--pd);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 24px rgba(0,0,0,.12);position:relative;}
+.summary-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.08));border-radius:14px;pointer-events:none;z-index:-1;}
+.summary-banner small{font-weight:800;letter-spacing:.14em;opacity:1;color:var(--p);} .summary-banner strong{font-size:2.2rem;font-weight:900;letter-spacing:-.05em;color:var(--pd);}
+.mini-card{background:rgba(255,255,255,.65);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:12px;padding:1.2rem;min-height:128px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 16px rgba(0,0,0,.08);position:relative;transition:.2s;}
+.mini-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.25),rgba(255,255,255,.08));border-radius:12px;pointer-events:none;z-index:-1;}
+.mini-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.1);}
+.mini-card small{font-weight:900;color:var(--p);letter-spacing:.1em;font-size:.75rem;} .mini-card b{display:block;font-size:1.4rem;color:var(--pd);margin:.6rem 0 .4rem;font-weight:900;}
 .nav-label{font-size:.72rem;letter-spacing:.12em;font-weight:900;opacity:.6;margin-top:.4rem;}
 @media(max-width:800px){.stApp{background-size:auto 100%%;} .block-container{padding:6.4rem .8rem 4rem;} .top-title{padding:1rem} .top-title img{max-width:54px;height:54px;}}
 </style>
@@ -349,81 +354,3 @@ if st.session_state.service is None:
     landing()
 else:
     dashboard(st.session_state.service)
-=======
-import streamlit as st
-
-def calculate_compound_savings(service_type, s1, r1, s2, r2):
-    # 군종별 복무 기간
-    periods = {"공군(21개월)": [2, 6, 6, 7], "육군/해병대(18개월)": [2, 6, 6, 4], "해군(20개월)": [2, 6, 6, 6]}
-    salaries = [75, 90, 120, 150]
-    current_periods = periods[service_type]
-    total_months = sum(current_periods)
-    
-    # 각 적금별 월 이율 계산
-    m_rate1 = (r1 / 100) / 12
-    m_rate2 = (r2 / 100) / 12
-    
-    # 1. 적금별 복리 만기 금액 계산 (함수 내 로직 분리)
-    def get_final_deposit(principal, m_rate, months):
-        if m_rate > 0:
-           return principal * (((1 + m_rate)**months - 1) / m_rate) * (1 + m_rate)
-        return principal * months
-
-    final_s1 = get_final_deposit(s1, m_rate1, total_months)
-    final_s2 = get_final_deposit(s2, m_rate2, total_months)
-    
-    total_deposit_with_interest = final_s1 + final_s2
-    total_deposit_principal = (s1 + s2) * total_months
-    total_interest = total_deposit_with_interest - total_deposit_principal
-    
-    # 2. 실 수령 월급 (월급 - 적금합계)
-    total_salary_only = 0
-    monthly_deposit_total = s1 + s2
-    for rank_idx, duration in enumerate(current_periods):
-        total_salary_only += (salaries[rank_idx] - monthly_deposit_total) * duration
-        
-    # 3. 매칭 지원금
-    matching_fund = total_deposit_principal
-    
-    return {
-        "실수령 월급 합계": int(total_salary_only),
-        "적금 원금": int(total_deposit_principal),
-        "복리 이자": int(total_interest),
-        "매칭 지원금": int(matching_fund),
-        "최종 자산": int(total_salary_only + total_deposit_with_interest + matching_fund)
-    }
-
-st.title("🪖 군 전역 자금 시뮬레이터 ")
-
-with st.sidebar:
-    st.header("⚙️ 설정")
-    service = st.selectbox("군종", ["공군(21개월)", "육군/해병대(18개월)", "해군(20개월)"])
-    
-    st.subheader("💰 적금 1")
-    s1 = st.number_input("납입액 (만원)", 0, 30, 30, key="s1")
-    r1 = st.slider("금리 (%)", 0.0, 10.0, 5.0, step=0.1, key="r1")
-
-    
-    st.subheader("💰 적금 2")
-    s2 = st.number_input("납입액 (만원)", 0, 30, 25, key="s2")
-    r2 = st.slider("금리 (%)", 0.0, 10.0, 5.0, step=0.1, key="r2")
-
-if s1 + s2 <= 55:
-    # 수정된 함수 호출 (인자 5개)
-    data = calculate_compound_savings(service, s1, r1, s2, r2)
-    
-    c1, c2 = st.columns(2)
-    c1.metric("최종 수령액", f"{data['최종 자산']:,} 만원")
-    c2.metric("순수 이자(복리 합산)", f"{data['복리 이자']:,} 만원")
-
-    st.write("### 📝 세부 내역")
-    st.table({
-        "구분": ["월급(적금제외)", "적금 원금", "복리 이자", "매칭 지원금"],
-        "금액": [f"{data['실수령 월급 합계']:,} 만원", 
-                f"{data['적금 원금']:,} 만원", 
-                f"{data['복리 이자']:,} 만원", 
-                f"{data['매칭 지원금']:,} 만원"]
-    })
-else:
-    st.error("적금 합계는 55만원을 넘을 수 없습니다.")
->>>>>>> 07307d2cfadc350a6f9f8ff195ff4f9929a7fdab
